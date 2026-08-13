@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-name">Heidi Vandermeer</div>
+      <div class="footer-tag">B2B marketing · AI · Marketing engines</div>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="/">Home</a><a href="/ideas">Ideas</a><a href="/about">About</a>
+    </nav>
+    <div class="footer-links"><a href="https://www.linkedin.com/in/heidivandermeer" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:hello@example.com">Email</a></div>
+  </div>
+  <div class="container copyright">© 2026 Heidi Vandermeer</div>
+</footer>
+<style>
+.footer { background:var(--deep-ink); color:rgba(250,248,245,.76); border-top:1px solid rgba(250,248,245,.1); padding:34px 0 28px; }
+.footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:30px; align-items:start; }
+.footer-name { color:var(--white); font-weight:900; margin-bottom:4px; }
+.footer-tag { font-size:.92rem; }
+.footer nav,.footer-links { display:flex; gap:18px; flex-wrap:wrap; }
+.footer a:hover { color:var(--white); }
+.copyright { margin-top:28px; font-size:.82rem; }
+@media (max-width: 760px) { .footer-grid { grid-template-columns:1fr; } }
+</style>

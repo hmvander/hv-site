@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Heidi Vandermeer | B2B Marketing, AI & Growth Systems',
+  description = 'Ideas, frameworks and experiments on B2B marketing, AI, demand generation and building better marketing engines from Heidi Vandermeer.',
+  canonical = 'https://example.com',
+  image = '/images/og-default.jpg'
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="index,follow" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Heidi Vandermeer',
+      url: canonical,
+      jobTitle: 'B2B Marketing Leader',
+      knowsAbout: ['B2B marketing', 'Demand generation', 'AI in marketing', 'Marketing operations', 'Growth systems']
+    })} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

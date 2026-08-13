@@ -1,0 +1,19 @@
+{
+  "name": "heidi-vandermeer-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.13.5"
+  },
+  "packageManager": "npm@11.6.2",
+  "engines": {
+    "node": ">=20 <25"
+  }
+}

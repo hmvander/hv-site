@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="About | Heidi Vandermeer" canonical="https://example.com/about">
+  <Header />
+  <main class="placeholder-page">
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <h1>About Heidi Vandermeer.</h1>
+      <p>A fuller biography and background will live here soon. For now, the homepage has the short version.</p>
+      <a class="text-link" href="/">← Back home</a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+<style>
+.placeholder-page { min-height:70vh; display:grid; align-items:center; padding:100px 0; }
+.placeholder-page .container { max-width:900px; }
+.placeholder-page h1 { max-width:800px; }
+.placeholder-page p:not(.eyebrow) { max-width:680px; font-size:1.16rem; }
+</style>

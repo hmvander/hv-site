@@ -1,0 +1,34 @@
+---
+const items = [
+  { n:'01', label:'Marketing Engines', title:'Marketing engines', text:'How demand generation, content, distribution, sales alignment, measurement, and operations work together to create sustainable growth.', accent:'var(--ocean-teal)' },
+  { n:'02', label:'AI + Marketing', title:'AI + marketing', text:'Practical ways AI can improve how marketing teams research, plan, create, analyze, and make decisions — beyond simply producing more content.', accent:'var(--digital-blue)' },
+  { n:'03', label:'Marketing Leadership', title:'Marketing leadership', text:'Operating models, team design, accountability, prioritization, and the realities of leading modern B2B marketing organizations.', accent:'var(--signal-coral)' }
+];
+---
+<section class="section">
+  <div class="container">
+    <div class="section-intro">
+      <p class="eyebrow">Focus areas</p>
+      <h2>What I’m exploring</h2>
+      <p>The questions and systems I keep coming back to.</p>
+    </div>
+    <div class="focus-grid">
+      {items.map(item => (
+        <article class="focus-card" style={`--accent:${item.accent}`}>
+          <div class="marker">{item.n} / {item.label.toUpperCase()}</div>
+          <div class="rule"></div>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+.focus-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.focus-card { border-top:4px solid var(--accent); padding:26px 8px 0 0; min-height:300px; }
+.marker { color:var(--accent); font-size:.75rem; font-weight:900; letter-spacing:.12em; }
+.rule { height:1px; background:rgba(18,58,55,.14); margin:20px 0 34px; }
+.focus-card p { max-width:34ch; }
+@media (max-width: 850px) { .focus-grid { grid-template-columns:1fr; } .focus-card { min-height:auto; } }
+</style>

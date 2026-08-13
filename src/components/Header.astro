@@ -1,0 +1,42 @@
+---
+const currentPath = Astro.url.pathname;
+const LINKEDIN_URL = 'https://www.linkedin.com/in/heidivandermeer';
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Heidi Vandermeer</a>
+    <button class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a class:list={[{ active: currentPath === '/' }]} href="/">Home</a>
+      <a class:list={[{ active: currentPath.startsWith('/ideas') }]} href="/ideas">Ideas</a>
+      <a class:list={[{ active: currentPath.startsWith('/about') }]} href="/about">About</a>
+      <a class="connect" href={LINKEDIN_URL} target="_blank" rel="noreferrer">Connect ↗</a>
+    </nav>
+  </div>
+</header>
+<script is:inline>
+  const btn = document.querySelector('.menu-button');
+  const nav = document.querySelector('#site-nav');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('open', !open);
+  });
+</script>
+<style>
+.site-header { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--shell) 92%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(18,58,55,.08); }
+.header-inner { min-height: 78px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.wordmark { color:var(--deep-ink); font-weight:900; letter-spacing:-.02em; font-size:1.05rem; }
+nav { display:flex; align-items:center; gap:26px; }
+nav a { position:relative; color:var(--deep-ink); font-weight:700; font-size:.95rem; }
+nav a:not(.connect)::after { content:""; position:absolute; left:0; right:100%; bottom:-6px; height:2px; background:var(--ocean-teal); transition:right .2s ease; }
+nav a:hover::after, nav a.active::after { right:0; }
+.connect { padding:.65rem .9rem; border:1px solid rgba(18,58,55,.15); border-radius:999px; }
+.menu-button { display:none; background:transparent; color:var(--deep-ink); border:1px solid rgba(18,58,55,.15); border-radius:999px; padding:.55rem .8rem; font-weight:800; }
+@media (max-width: 760px) {
+  .menu-button { display:block; }
+  nav { display:none; position:absolute; top:72px; left:14px; right:14px; padding:18px; background:var(--white); border:1px solid rgba(18,58,55,.12); border-radius:18px; box-shadow:var(--shadow-soft); flex-direction:column; align-items:stretch; }
+  nav.open { display:flex; }
+  .connect { text-align:center; }
+}
+</style>
