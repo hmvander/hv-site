@@ -1,10 +1,11 @@
 <section class="section about-preview">
   <div class="container about-grid">
-    <div class="portrait-placeholder" aria-hidden="true">
-      <div class="shape shape-a"></div>
-      <div class="shape shape-b"></div>
-      <div class="shape shape-c"></div>
-      <div class="portrait-label">Portrait placeholder</div>
+    <div class="portrait-frame">
+      <img
+        src="/images/heidi-portrait.png"
+        alt="Portrait of Heidi Vandermeer"
+        class="about-portrait"
+        />
     </div>
     <div class="about-copy">
       <p class="eyebrow">About</p>
@@ -17,12 +18,30 @@
 </section>
 <style>
 .about-grid { display:grid; grid-template-columns:.95fr 1.05fr; gap:70px; align-items:center; }
-.portrait-placeholder { min-height:470px; position:relative; overflow:hidden; border-radius:var(--radius-lg); background:linear-gradient(135deg,var(--mist),var(--white)); border:1px solid rgba(18,58,55,.08); }
-.shape { position:absolute; border-radius:50%; }
-.shape-a { width:320px;height:320px;background:var(--deep-ink);left:-80px;bottom:-90px; }
-.shape-b { width:210px;height:210px;background:var(--soft-coral);right:26px;top:28px; }
-.shape-c { width:110px;height:110px;background:var(--sea-glass);right:78px;bottom:52px; }
-.portrait-label { position:absolute; inset:auto 24px 24px auto; color:var(--deep-ink); font-size:.78rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
+
+.portrait-frame {
+  min-height: 470px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--mist), var(--white));
+  border: 1px solid rgba(18,58,55,.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.about-portrait {
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .about-copy p { max-width:680px; font-size:1.05rem; }
-@media (max-width: 900px) { .about-grid { grid-template-columns:1fr; } .portrait-placeholder { min-height:360px; } }
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns:1fr; }
+  .portrait-frame { min-height:360px; }
+  .about-portrait { min-height:360px; }
+}
 </style>
