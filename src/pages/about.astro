@@ -22,12 +22,10 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/heidivandermeer';
           <p class="hero-lede">I’m Heidi, a B2B marketing leader focused on building stronger growth engines, better marketing systems, and teams that operate with real impact.</p>
         </div>
         <div class="portrait-composition">
+          <div class="portrait-accent portrait-accent--coral" aria-hidden="true"></div>
+          <div class="portrait-accent portrait-accent--teal" aria-hidden="true"></div>
           <figure class="portrait-frame">
-            <img
-              src="/images/heidi-editorial-portrait.png"
-              alt="Portrait of Heidi Vandermeer"
-            />
-          </figure>
+            <img src="/images/heidi-portrait.png" alt="Portrait of Heidi Vandermeer" />
         </div>
       </div>
     </section>
@@ -60,9 +58,12 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/heidivandermeer';
   .hero-grid { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr); gap:clamp(3rem,7vw,7rem); align-items:center; }
   .hero-copy h1 { max-width:730px; margin-bottom:2rem; }
   .hero-lede { max-width:680px; color:var(--deep-ink); font-size:clamp(1.2rem,2vw,1.48rem); line-height:1.55; }
-  .portrait-composition { width:min(100%,620px); justify-self:center; }
-  .portrait-frame { margin:0; }
-  .portrait-frame img { display:block; width:100%; height:auto; }
+  .portrait-composition { position:relative; padding:2rem 1.7rem 1.6rem 2.4rem; }
+  .portrait-frame { position:relative; z-index:2; margin:0; aspect-ratio:4/5; overflow:hidden; border-radius:190px 190px 24px 24px; background:var(--mist); }
+  .portrait-frame img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+  .portrait-accent { position:absolute; z-index:1; }
+  .portrait-accent--coral { width:48%; aspect-ratio:1; top:0; right:0; border-radius:50%; background:var(--soft-coral); }
+  .portrait-accent--teal { width:38%; height:34%; left:0; bottom:0; background:var(--ocean-teal); border-radius:0 0 0 70px; }
   .narrative-section { padding:clamp(5rem,10vw,9rem) 0; border-block:1px solid rgba(18,58,55,.11); }
   .narrative-grid { display:grid; grid-template-columns:1fr 3fr; gap:3rem; }
   .section-marker { color:var(--signal-coral); font-weight:800; letter-spacing:.12em; }
@@ -98,6 +99,6 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/heidivandermeer';
   .connect-section .eyebrow { color:var(--sea-glass); }
   .connect-section h2 { max-width:850px; margin-bottom:2.2rem; color:var(--white); font-size:clamp(2rem,4vw,3.4rem); }
   .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-  @media (max-width:900px) { .hero-grid,.personal-grid { grid-template-columns:1fr; } .narrative-grid,.connect-grid { grid-template-columns:1fr; gap:1.25rem; } .personal-copy { padding-top:0; } }
-  @media (max-width:640px) { .about-hero { padding-top:4rem; } .topic-grid { grid-template-columns:1fr; } .topic-grid li,.topic-grid li:nth-child(even) { min-height:0; padding:1.5rem 0; border-right:0; } }
+  @media (max-width:900px) { .hero-grid,.personal-grid { grid-template-columns:1fr; } .portrait-composition { width:min(100%,600px); } .narrative-grid,.connect-grid { grid-template-columns:1fr; gap:1.25rem; } .personal-copy { padding-top:0; } }
+  @media (max-width:640px) { .about-hero { padding-top:4rem; } .portrait-composition { padding:1.2rem .9rem 1rem 1.2rem; } .topic-grid { grid-template-columns:1fr; } .topic-grid li,.topic-grid li:nth-child(even) { min-height:0; padding:1.5rem 0; border-right:0; } }
 </style>
