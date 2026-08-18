@@ -24,9 +24,18 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/heidivandermeer';
   });
 </script>
 <style>
-.site-header { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--shell) 92%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(18,58,55,.08); }
-.header-inner { min-height: 78px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-.wordmark { color:var(--deep-ink); font-weight:900; letter-spacing:-.02em; font-size:1.05rem; }
+.site-header { 
+  position: sticky; 
+  top: 0; 
+  z-index: 50; 
+  background: color-mix(in srgb, var(--sea-glass) 18%, transparent); 
+  backdrop-filter: blur(12px); 
+  border-bottom: 1px solid rgba(18,58,55,.08);  
+}
+.header-inner { 
+  min-height: 78px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.wordmark { 
+  color:var(--deep-ink); font-weight:900; letter-spacing:-.02em; font-size:1.05rem; }
 nav { display:flex; align-items:center; gap:26px; }
 nav a { position:relative; color:var(--deep-ink); font-weight:700; font-size:.95rem; }
 nav a:not(.connect)::after { content:""; position:absolute; left:0; right:100%; bottom:-6px; height:2px; background:var(--ocean-teal); transition:right .2s ease; }
