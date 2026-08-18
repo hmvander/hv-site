@@ -31,8 +31,8 @@ nav { display:flex; align-items:center; gap:26px; }
 nav a { position:relative; color:var(--deep-ink); font-weight:700; font-size:.95rem; }
 nav a:not(.connect)::after { content:""; position:absolute; left:0; right:100%; bottom:-6px; height:2px; background:var(--ocean-teal); transition:right .2s ease; }
 nav a:hover::after, nav a.active::after { right:0; }
-.connect { padding:.65rem .9rem; border:1px solid rgba(18,58,55,.15); border-radius:999px; }
-.menu-button { display:none; background:transparent; color:var(--deep-ink); border:1px solid rgba(18,58,55,.15); border-radius:999px; padding:.55rem .8rem; font-weight:800; }
+.connect { padding:.65rem .9rem; border:1px solid rgba(18,58,55,.15); border-radius:12px; }
+.menu-button { display:none; background:transparent; color:var(--deep-ink); border:1px solid rgba(18,58,55,.15); border-radius:12px; padding:.55rem .8rem; font-weight:800; }
 @media (max-width: 760px) {
   .menu-button { display:block; }
   nav { display:none; position:absolute; top:72px; left:14px; right:14px; padding:18px; background:var(--white); border:1px solid rgba(18,58,55,.12); border-radius:18px; box-shadow:var(--shadow-soft); flex-direction:column; align-items:stretch; }
