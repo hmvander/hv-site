@@ -78,7 +78,7 @@ p { margin-top: 0; font-family: var(--font-body); font-weight: 400; }
 }
 .btn:hover { transform: translateY(-2px); }
 .btn-primary { background: var(--soft-coral); color: var(--deep-ink); }
-.btn-secondary { border: 1px solid var(sea-glass); color: var(--deep-ink); }
+.btn-secondary { border: 1px solid var(--sea-glass); color: var(--deep-ink); }
 .text-link { color: var(--ocean-teal); font-weight: 700; }
 .text-link .arrow { display: inline-block; transition: transform .2s ease; }
 .text-link:hover .arrow { transform: translateX(4px); }
