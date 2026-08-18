@@ -77,7 +77,7 @@ p { margin-top: 0; font-family: var(--font-body); font-weight: 400; }
   transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--soft-coral); color: var(--deep-ink); }
+.btn-primary { background: var(--sea-glass); color: var(--deep-ink); }
 .btn-secondary { border: 1px solid rgba(18,58,55,.22); color: var(--ocean-teal); }
 .text-link { color: var(--ocean-teal); font-weight: 700; }
 .text-link .arrow { display: inline-block; transition: transform .2s ease; }
