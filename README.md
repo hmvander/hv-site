@@ -66,10 +66,6 @@ The LinkedIn URL is currently set to:
 - Connect section: `src/components/Connect.astro`
 - Global visual system: `src/styles/global.css`
 
-## Portrait
-A portrait can later be added at:
-`public/images/heidi-vandermeer.jpg`
-
 The current homepage intentionally uses a polished abstract placeholder so the site works without photography.
 
 ## Social preview
